@@ -1,59 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure Core Terminal</title>
-    <style>
-        body { background-color: #050505; color: #00ff41; font-family: 'Courier New', monospace; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; overflow: hidden; }
-        .box { border: 1px solid #00ff41; padding: 3rem; background: rgba(0, 20, 0, 0.9); box-shadow: 0 0 15px #00ff41; position: relative; z-index: 10; }
-        input { background: transparent; border: none; border-bottom: 2px solid #00ff41; color: #00ff41; padding: 10px; font-family: inherit; width: 250px; outline: none; font-size: 1.1rem; }
-        button { background: #00ff41; color: black; border: none; padding: 10px 25px; cursor: pointer; font-family: inherit; font-weight: bold; transition: 0.3s; margin-left: 10px;}
-        button:hover { background: #008f11; color: #fff; }
-        .hint { color: #004400; font-size: 0.7rem; margin-top: 20px; }
-    </style>
+    <title>Critical Kernel Access</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="box">
-        <h2 style="letter-spacing: 5px;">ACCESS RESTRICTED</h2>
-        <p style="color: #008f11;">Enter Authorization Key to Proceed:</p>
-        
-        <div style="margin-top: 20px;">
-            <input type="text" id="inputField" autocomplete="off" placeholder="_">
-            <button onclick="validate()">ENTER</button>
-        </div>
-        
-        <p id="msg" style="margin-top: 20px; font-weight: bold; min-height: 1.5em;"></p>
-        
-        <div class="hint">
-            // ERR: String literal "PAI" not found in source.
-            // SYSTEM_LOG: Flag reconstructed via charCode shifting.
-        </div>
+<body class="bg-black text-zinc-900 font-mono min-h-screen flex items-center justify-center">
+
+    <div class="border border-zinc-900 p-10 bg-[#050505] shadow-2xl">
+        <div class="text-[9px] mb-8 text-zinc-800 tracking-[0.5em] animate-pulse">SYSTEM_INTEGRITY_CHECK: 0x00FF41</div>
+        <input type="text" id="_0x4f22" class="bg-transparent border-b border-zinc-800 text-zinc-500 outline-none w-64 text-center pb-2 focus:border-zinc-500 transition-colors" placeholder="PASSKEY">
     </div>
 
     <script>
-        function validate() {
-            var userInput = document.getElementById('inputField').value;
-            var display = document.getElementById('msg');
+    
+        const _0x1a2b = ['fromCharCode', 'map', 'split', 'keyup', 'value', 'Enter', 'log', 'PAI{', 'charCodeAt'];
+        const _0x5e21 = (n) => _0x1a2b[n];
 
-            var _0x5a1 = [85, 70, 78, 128, 112, 54, 119, 57, 115, 121, 110, 100, 101, 110, 104, 116, 53, 103, 123, 58, 108, 53, 126, 130];
-      
-            var _0x2b9 = "";
-            for (var i = 0; i < _0x5a1.length; i++) {
-                _0x2b9 += String.fromCharCode(_0x5a1[i] - 5);
-            }
+        (function(_0x99, _0x11) {
 
-            // Validasi
-            if (userInput === _0x2b9) {
-                display.style.color = "#00ff41";
-                display.innerText = ">> [SUCCESS] DATABASE UNLOCKED.";
-                alert("Flag Correct: " + _0x2b9);
-            } else {
-                display.style.color = "#ff0000";
-                display.innerText = ">> [ERROR] ACCESS DENIED. LOGGING ATTEMPT.";
-            }
-        }
-        document.addEventListener('contextmenu', event => event.preventDefault());
+            const _0x44fa = [0x30, 0x20, 0x28, 0x3a, 0x03, 0x50, 0x33, 0x67, 0x0d, 0x03, 0x05, 0x6e, 0x04, 0x77, 0x0b, 0x76, 0x6e, 0x68, 0x74, 0x35, 0x1e];
+            const _0xbc22 = "\x47\x30\x79\x5f\x4c\x30\x76\x33\x5f\x4b\x31\x72\x34\x6e"; 
+
+            const _0xfe3 = document.getElementById('_0x4f22');
+
+            _0xfe3.addEventListener(_0x5e21(3), (_0x77) => {
+                if (_0x77.key === _0x5e21(5)) {
+                    let _0x911 = _0xfe3[_0x5e21(4)];
+                    
+             
+                    let _0x00aa = "";
+                    for (let _0xbb = 0; _0xbb < _0x44fa.length; _0xbb++) {
+                        const _0xcc = _0x44fa[_0xbb];
+                        const _0xdd = _0xbc22[_0x5e21(8)](_0xbb % _0xbc22.length);
+                        _0x00aa += String[_0x5e21(0)](_0xcc ^ _0xdd);
+                    }
+
+             
+                    console[_0x5e21(6)]("\x41\x63\x63\x65\x73\x73\x20\x44\x65\x6e\x69\x65\x64");
+                    
+                    if (_0x911 === "\x6b\x31\x72\x61\x6e\x74\x69") {
+                        alert("\x53\x79\x73\x74\x65\x6d\x20\x55\x6e\x6c\x6f\x63\x6b\x65\x64\x3a\x20" + _0x00aa);
+                    } else {
+                        alert("salah boyot")
+                    }
+                }
+            });
+        })();
     </script>
 </body>
 </html>
